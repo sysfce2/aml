@@ -1,7 +1,7 @@
 project(
 	'aml',
 	'c',
-	version: '1.0.0-rc0',
+	version: '1.0.0',
 	license: 'ISC',
 	default_options: [
 		'c_std=c11',
