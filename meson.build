@@ -90,13 +90,14 @@ if get_option('examples')
 endif
 
 if not is_static_subproject
-	install_headers('include/aml.h')
+	install_headers('include/aml.h', subdir: meson.project_name() + '1')
 
 	pkgconfig = import('pkgconfig')
 	pkgconfig.generate(
 		aml,
 		version: meson.project_version(),
-		filebase: meson.project_name(),
+		filebase: meson.project_name() + '1',
+		subdirs: meson.project_name() + '1',
 		name: meson.project_name(),
 		description: 'Another main loop library',
 	)
